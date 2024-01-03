@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "306986669419",
+    "project_id": "separaga-fe085",
+    "storage_bucket": "separaga-fe085.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:306986669419:android:be1b4c05b8f7405742a82e",
+        "android_client_info": {
+          "package_name": "com.example.separaga"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQup81wf13WVA9AiyV3JhDEHHlTbW9cqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

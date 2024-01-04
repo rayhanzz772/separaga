@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     String rool = 'patient';
     return Scaffold(
-      backgroundColor: Colors.orange[900],
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -237,12 +237,16 @@ class _RegisterState extends State<Register> {
                           height: 10,
                         ),
                         Container(
+                          padding: EdgeInsets.only(left: 15),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text("Already have an Account ?"),
                               TextButton(
-                                  onPressed: onPressed, child: Text("Login"))
+                                  onPressed: onPressed,
+                                  child: Text(
+                                    "Login",
+                                    style: TextStyle(color: hijau),
+                                  ))
                             ],
                           ),
                         ),

@@ -170,12 +170,16 @@ class _LoginPageState extends State<LoginPage> {
                             height: 10,
                           ),
                           Container(
+                            padding: EdgeInsets.only(left: 10),
                             child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text("Don't have an Account ?"),
                                 TextButton(
-                                    onPressed: onPressed, child: Text("Signup"))
+                                    onPressed: onPressed,
+                                    child: Text(
+                                      "Signup",
+                                      style: TextStyle(color: hijau),
+                                    ))
                               ],
                             ),
                           ),

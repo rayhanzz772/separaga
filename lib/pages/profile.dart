@@ -23,7 +23,6 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          automaticallyImplyLeading: false,
           backgroundColor: hijau, // Warna AppBar sesuai kebutuhan Anda
           toolbarHeight: 80,
           title: Column(
@@ -43,9 +42,11 @@ class _ProfileState extends State<Profile> {
                     children: [
                       IconButton(
                         onPressed: () {
-                          // Aksi ketika ikon notifikasi ditekan
+                          setState(() {
+                            showProgress = true;
+                          });
                         },
-                        icon: Icon(Icons.notifications),
+                        icon: Icon(Icons.refresh),
                       ),
                     ],
                   ),
@@ -227,47 +228,6 @@ class _ProfileState extends State<Profile> {
 
                       SizedBox(
                         height: 30,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          MaterialButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0))),
-                            height: 40,
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: Text(
-                              "Back",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            color: hijau,
-                          ),
-                          MaterialButton(
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10.0))),
-                            height: 40,
-                            onPressed: () {
-                              setState(() {
-                                showProgress = true;
-                              });
-                            },
-                            child: Text(
-                              "Reload",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            color: hijau,
-                          ),
-                        ],
                       ),
                     ],
                   ),

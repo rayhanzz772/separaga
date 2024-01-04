@@ -219,47 +219,58 @@ class HomePage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Spacer(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(
-                  onPressed: () async {
-                    await FirebaseAuth.instance.signOut();
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  IconButton(
+                    onPressed: () async {
+                      await FirebaseAuth.instance.signOut();
 
-                    // ignore: use_build_context_synchronously
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => LoginPage()),
-                    );
-                  },
-                  icon: Icon(Icons.logout), // Ikon untuk menu "Home"
-                  iconSize: 70, // Mengatur ukuran ikon
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              History()), // Ganti dengan nama halaman Badminton Anda
-                    );
-                  },
-                  icon: Icon(Icons.history), // Ikon untuk menu "History"
-                  iconSize: 70, // Mengatur ukuran ikon
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              Profile()), // Ganti dengan nama halaman Badminton Anda
-                    );
-                  },
-                  icon: Icon(Icons.person), // Ikon untuk menu "Profile"
-                  iconSize: 70, // Mengatur ukuran ikon
-                ),
-              ],
+                      // ignore: use_build_context_synchronously
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    },
+                    icon: Icon(
+                      Icons.logout,
+                      color: Colors.grey,
+                    ), // Ikon untuk menu "Home"
+                    iconSize: 70, // Mengatur ukuran ikon
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                History()), // Ganti dengan nama halaman Badminton Anda
+                      );
+                    },
+                    icon: Icon(
+                      Icons.history,
+                      color: Colors.grey,
+                    ), // Ikon untuk menu "History"
+                    iconSize: 70, // Mengatur ukuran ikon
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                Profile()), // Ganti dengan nama halaman Badminton Anda
+                      );
+                    },
+                    icon: Icon(
+                      Icons.person,
+                      color: Colors.grey,
+                    ), // Ikon untuk menu "Profile"
+                    iconSize: 70, // Mengatur ukuran ikon
+                  ),
+                ],
+              ),
             )
           ],
         ),

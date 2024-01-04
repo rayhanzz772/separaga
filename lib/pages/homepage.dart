@@ -8,8 +8,6 @@ import 'package:separaga/pages/history.dart';
 import 'package:separaga/pages/login.dart';
 import 'package:separaga/pages/profile.dart';
 
-import '../main.dart';
-
 class HomePage extends StatelessWidget {
   final String userEmail;
 

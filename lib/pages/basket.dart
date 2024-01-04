@@ -1,10 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:separaga/constants.dart';
 import 'package:separaga/pages/basket/bas_1.dart';
-import 'package:separaga/pages/login.dart';
-
-import '../main.dart';
 
 class Basket extends StatelessWidget {
   const Basket({super.key});

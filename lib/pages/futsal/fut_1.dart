@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:separaga/constants.dart';
 import 'package:separaga/pages/futsal/booking.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Fut_1 extends StatelessWidget {
   const Fut_1({super.key});

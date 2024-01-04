@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:separaga/constants.dart';
 import 'package:separaga/pages/basket/booking.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Bas_1 extends StatelessWidget {
   const Bas_1({super.key});

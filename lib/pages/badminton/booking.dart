@@ -2,8 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:separaga/constants.dart';
-import 'package:separaga/pages/badminton/bad_1.dart';
-import 'package:separaga/pages/homepage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class BookingPage extends StatefulWidget {
@@ -106,13 +104,13 @@ class _BookingPageState extends State<BookingPage> {
   }
 
   postDetailsToFirestore(waktu) async {
-    FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
     var user = _auth.currentUser;
     CollectionReference ref =
         FirebaseFirestore.instance.collection('booking_history');
     await ref.add({
       'phone': phoneController.text,
       'username': namaController.text,
+      'tempat': tempat,
       'waktu': waktu,
       'uid': user!.uid, // Menyimpan UID pengguna ke dalam Firestore
     });

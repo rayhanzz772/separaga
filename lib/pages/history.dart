@@ -17,6 +17,7 @@ class _HistoryState extends State<History> {
   String phone = '';
   String nama = '';
   String email = '';
+  String tempat = '';
 
   @override
   Widget build(BuildContext context) {
@@ -105,6 +106,7 @@ class _HistoryState extends State<History> {
                       shrinkWrap: true,
                       itemCount: historyList.length,
                       itemBuilder: (context, index) {
+                        String tempat = historyList[index]['tempat'];
                         String nama = historyList[index]['username'];
                         String phone = historyList[index]['phone'];
                         String waktu = historyList[index]['waktu'];
@@ -119,8 +121,12 @@ class _HistoryState extends State<History> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Nama: $nama',
+                                  'Tempat: $tempat',
                                   style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(height: 8),
+                                Text(
+                                  'Nama: $nama',
                                 ),
                                 SizedBox(height: 8),
                                 Text('Phone: $phone'),

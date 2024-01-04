@@ -4,7 +4,9 @@ import 'package:separaga/constants.dart';
 import 'package:separaga/pages/badminton.dart';
 import 'package:separaga/pages/basket.dart';
 import 'package:separaga/pages/futsal.dart';
+import 'package:separaga/pages/history.dart';
 import 'package:separaga/pages/login.dart';
+import 'package:separaga/pages/profile.dart';
 
 import '../main.dart';
 
@@ -221,47 +223,44 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 IconButton(
-                  onPressed: () {
-                    // Aksi ketika tombol "Home" ditekan
+                  onPressed: () async {
+                    await FirebaseAuth.instance.signOut();
+
+                    // ignore: use_build_context_synchronously
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginPage()),
+                    );
                   },
-                  icon: Icon(Icons.home), // Ikon untuk menu "Home"
+                  icon: Icon(Icons.logout), // Ikon untuk menu "Home"
                   iconSize: 70, // Mengatur ukuran ikon
                 ),
                 IconButton(
                   onPressed: () {
-                    // Aksi ketika tombol "History" ditekan
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              History()), // Ganti dengan nama halaman Badminton Anda
+                    );
                   },
                   icon: Icon(Icons.history), // Ikon untuk menu "History"
                   iconSize: 70, // Mengatur ukuran ikon
                 ),
                 IconButton(
                   onPressed: () {
-                    // Aksi ketika tombol "Profile" ditekan
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              Profile()), // Ganti dengan nama halaman Badminton Anda
+                    );
                   },
                   icon: Icon(Icons.person), // Ikon untuk menu "Profile"
                   iconSize: 70, // Mengatur ukuran ikon
                 ),
               ],
             )
-
-            // ElevatedButton(
-            //   onPressed: () async {
-            //     await FirebaseAuth.instance.signOut();
-
-            //     // ignore: use_build_context_synchronously
-            //     Navigator.pushReplacement(
-            //       context,
-            //       MaterialPageRoute(builder: (context) => LoginPage()),
-            //     );
-            //   },
-            //   child: const Text(
-            //     'Logout',
-            //     style: TextStyle(
-            //       fontWeight: FontWeight.w300,
-            //       fontSize: 14,
-            //     ),
-            //   ),
-            // ),
           ],
         ),
       ),

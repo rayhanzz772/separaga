@@ -123,7 +123,7 @@ class _BookingPageState extends State<BookingPage> {
     var no = phoneController.text;
     var waktu = selectedValue;
     var message =
-        '==== Booking ==== \nNama : $tempat\nSaya : $nama \nNo Telp : $no\nWaktu : $waktu';
+        '==== Booking ==== \nTempat : $tempat\nPembooking : $nama \nNo Telp : $no\nWaktu : $waktu';
     var encodedMessage = Uri.encodeFull(message);
     var url = 'https://wa.me/6289652616158?text=$encodedMessage';
     if (await canLaunchUrl(Uri.parse(url))) {

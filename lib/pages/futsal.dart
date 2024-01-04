@@ -87,12 +87,6 @@ class Futsal extends StatelessWidget {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: Colors.blue, // Warna border yang diinginkan
-            width: 2.0, // Lebar border
-          ),
-        ),
         padding: EdgeInsets.only(left: 10, top: 20, right: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

@@ -7,7 +7,7 @@
     </intent>
 </queries>
     <application
-        android:label="separaga"
+        android:label="Separaga"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
